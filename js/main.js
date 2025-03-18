@@ -71,3 +71,9 @@ function reduceBalls() {
     ball1.dataset.size = ball1Size
     ball2.dataset.size = ball2Size
 }
+
+function changeBgColor() {
+    var elBody = document.querySelector('body')
+
+    elBody.style.backgroundColor = getRandomColor()
+}
