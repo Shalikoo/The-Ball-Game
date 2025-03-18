@@ -1,7 +1,29 @@
 'use strict'
 
+function onInit() {
+    var ball1 = document.querySelector('.ball')
+    var ball2 = document.querySelector('.sec-ball')
+    var resetSize = 100
+    ball1.style.backgroundColor = 'red'
+    ball2.style.backgroundColor = 'blue'
+
+    ball1.style.width = 100 + 'px'
+    ball1.style.height = 100 + 'px'
+    ball1.innerText = '100'
+
+    ball2.style.width = 100 + 'px'
+    ball2.style.height = 100 + 'px'
+    ball2.innerText = '100'
+
+    var elBody = document.querySelector('body')
+    elBody.style.backgroundColor = 'black'
+
+    ball1.dataset.size = resetSize
+    ball2.dataset.size = resetSize
+}
+
 function onBallClick(elBall, maxDiameter) {
-    let ballSize = parseInt(elBall.dataset.size) || 100
+    var ballSize = parseInt(elBall.dataset.size) || 100
 
     ballSize += getRandomInt(20, 60)
 
@@ -56,6 +78,7 @@ function reduceBalls() {
     if(ball1Size <= minDiameter){
         ball1Size = minDiameter
     }
+
     if(ball2Size <= minDiameter){
         ball2Size = minDiameter
     }
@@ -74,6 +97,6 @@ function reduceBalls() {
 
 function changeBgColor() {
     var elBody = document.querySelector('body')
-
     elBody.style.backgroundColor = getRandomColor()
 }
+
