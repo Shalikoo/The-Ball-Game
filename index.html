@@ -10,8 +10,9 @@
     <h1 id="heading-h1">The Ball Game</h1>
 
     <div class="balls-container">
-        <div class="ball" onclick="onBallClick(this, 400)">100</div>
-        <div class="sec-ball" onclick="onBallClick(this, 300)">100</div>
+        <div class="ball" onclick="onBallClick(this, 400)" data-size="100" style="background-color: red;">100</div>
+        <div class="sec-ball" onclick="onBallClick(this, 300)" data-size="100" style="background-color: blue;">100</div>
+        <div class="third-ball" onclick="swapBalls()">Swap</div>
     </div>
 
     <script src="js/util.js"></script>
