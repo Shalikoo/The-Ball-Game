@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="onInit()">
     <h1 id="heading-h1">The Ball Game</h1>
+    <button class="undo-btn" onclick="undo()" disabled>Undo</button>
+    <button class="redo-btn" onclick="redo()" disabled>Redo</button>
+    <h2 class="moves-title">Moves: 0</h2>
 
     <div class="balls-container">
         <div class="ball" onclick="onBallClick(this, 400)" data-size="100" style="background-color: red;">100</div>
