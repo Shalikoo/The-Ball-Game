@@ -43,3 +43,31 @@ function swapBalls() {
 }
 
 
+function reduceBalls() {
+    var ball1 = document.querySelector('.ball')
+    var ball2 = document.querySelector('.sec-ball')
+    var ball1Size = ball1.dataset.size || 100
+    var ball2Size = ball2.dataset.size || 100
+    var minDiameter = 100
+
+    ball1Size -= getRandomInt(20, 60)
+    ball2Size -= getRandomInt(20, 60)
+
+    if(ball1Size <= minDiameter){
+        ball1Size = minDiameter
+    }
+    if(ball2Size <= minDiameter){
+        ball2Size = minDiameter
+    }
+
+    ball1.style.width = ball1Size + 'px'
+    ball1.style.height = ball1Size + 'px'
+    ball1.innerText = ball1Size
+
+    ball2.style.width = ball2Size + 'px'
+    ball2.style.height = ball2Size + 'px'
+    ball2.innerText = ball2Size
+
+    ball1.dataset.size = ball1Size
+    ball2.dataset.size = ball2Size
+}
